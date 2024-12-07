@@ -9,3 +9,38 @@
     color: #6c757d; /* Cambia el color a un tono gris claro */
   }
 
+  /*Media Queries*/
+
+ @media (max-width: 768px) {
+   .w-50 {
+    display: none;
+   }
+  }
+
+
+  /* Media Query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    #skills .d-flex {
+      flex-direction: column; /* Cambia la dirección de fila a columna */
+      gap: 1rem; /* Añade un espacio entre los elementos */
+    }
+
+    #skills-icons {
+      width: 100%; /* Asegura que los iconos ocupen todo el ancho */
+      margin: 0 auto; /* Centra los iconos */
+    }
+
+    #skills-icons .d-flex {
+      flex-wrap: wrap; /* Permite que los iconos se ajusten automáticamente */
+      justify-content: center; /* Centra los iconos */
+    }
+
+    #skills-image {
+      display: none; /* Oculta la imagen en pantallas pequeñas */
+    }
+
+    #remove {
+        display: none; /* Oculta el botón en pantallas pequeñas */
+    }
+  }
+  
