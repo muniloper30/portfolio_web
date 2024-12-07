@@ -1,0 +1,11 @@
+
+
+  .icon-hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .icon-hover:hover {
+    transform: scale(1.2); /* Agranda el ícono al pasar el mouse */
+    color: #6c757d; /* Cambia el color a un tono gris claro */
+  }
+
