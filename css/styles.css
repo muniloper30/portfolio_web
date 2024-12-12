@@ -44,3 +44,14 @@
     }
   }
   
+
+  section {
+    opacity: 0; /* Inicia invisible */
+    transform: translateY(50px); /* Desplazamiento hacia abajo */
+    transition: opacity 1s ease-out, transform 1.5s ease-out; /* Transición suave */
+}
+
+section.visible {
+    opacity: 1; /* Hace que la sección se vuelva visible */
+    transform: translateY(0); /* Mueve la sección a su posición original */
+}
