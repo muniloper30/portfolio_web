@@ -67,6 +67,23 @@
    .w-50 {
     display: none;
    }
+   #contenedor-experiencia{
+    position: fixed;
+    opacity: 0;
+  }
+
+  #contenedor-experiencia.visible {
+    opacity: 1; /* Estado final */
+    transition: opacity 3s; /* Animamos el 'opacity' */
+    position: relative;
+  }
+
+  #btn-exp {
+    margin-bottom: 12rem;
+    font-size: 1.5rem;
+    z-index: 10;
+    position: relative;
+  }
   }
 
 
@@ -86,6 +103,29 @@
       flex-wrap: wrap; /* Permite que los iconos se ajusten automáticamente */
       justify-content: center; /* Centra los iconos */
     }
+
+
+    #btn-exp {
+      margin: 0 0;
+      margin-bottom: 2.5rem;
+      margin-left: 3rem;
+      font-size: 1.5rem;
+      z-index: 10;
+    }
+
+
+    #contenedor-experiencia{
+      position: fixed;
+      opacity: 0;
+    }
+
+    #contenedor-experiencia.visible {
+      opacity: 1; /* Estado final */
+      transition: opacity 3s; /* Animamos el 'opacity' */
+      position: relative;
+    }
+    
+   
 
     #skills-image {
       display: none; /* Oculta la imagen en pantallas pequeñas */
