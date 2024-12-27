@@ -25,16 +25,27 @@
 
 
 #miNombre {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   color: #fff;
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
   font-size: 2rem;
   text-decoration: none;
 }
 
-#miNombre:hover{
+
+#miNombre::before{
+  content: "VL";
+}
+
+#miNombre:hover:before{
+  content: "Victor Lorencio";
   color: #0D6EFD;
   background-color: #fff;
   border: 1px solid;
   border-radius: 0.5rem;
+  box-shadow: inset 200px 0 0 0 #ffff;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   padding: 0 10px;
 }
@@ -89,6 +100,8 @@
 
   /* Media Query para pantallas pequeñas */
   @media (max-width: 768px) {
+
+    
     #skills .d-flex {
       flex-direction: column; /* Cambia la dirección de fila a columna */
       gap: 1rem; /* Añade un espacio entre los elementos */
