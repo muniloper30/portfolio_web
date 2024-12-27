@@ -23,3 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // También ejecutar al cargar la página para ver si alguna sección debe mostrarse desde el inicio
     mostrarSecciones();
 });
+
+
+const botonExperiencia = document.getElementById("boton-experiencia");
+const contenedorExperiencia = document.getElementById("contenedor-experiencia");
+
+botonExperiencia.addEventListener("click", () => {
+    contenedorExperiencia.classList.add("visible"); // Añade la clase para la animación
+    contenedorExperiencia.style.display = "block"; // Asegura que se muestre el contenedor
+    botonExperiencia.style.display = "none"; // Oculta el botón
+  });
