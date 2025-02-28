@@ -150,6 +150,16 @@
   }
   
 
+  #container-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+  
+
   section {
     opacity: 0; /* Inicia invisible */
     transform: translateY(50px); /* Desplazamiento hacia abajo */
@@ -160,3 +170,4 @@ section.visible {
     opacity: 1; /* Hace que la sección se vuelva visible */
     transform: translateY(0); /* Mueve la sección a su posición original */
 }
+

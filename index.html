@@ -313,28 +313,86 @@
       
       <!-- Proyectos -->
       <section id="proyectos">
-        <h3 class="text-primary text-center">Proyectos <br><br></h3>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  <h3 class="text-primary text-center">Proyectos <br><br></h3>
+  <div id="container-cards" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
           <div class="col">
-            <div class="card bg-secondary text-light h-100 ratio-1x1">
+          <div class="card bg-secondary text-light h-75">
+            <img
+              src="/img/api-workout.png"
+              class="card-img-top" style="width: auto; height: 300px;"
+              alt="Proyecto 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-primary"><b>API RESTful</b></h5>
+              <p class="card-text">
+                API RESTful, desarrollada con Node.js y Express, permite gestionar rutinas de entrenamiento de manera eficiente. 
+                Está diseñada para proporcionar una estructura flexible y escalable, facilitando la creación, lectura, actualización y eliminación (CRUD) 
+                de workouts. Base de datos en Supabase y desplegada en Vercel
+              </p>
+              <a
+                href="https://github.com/muniloper30/workouts-fit-api.git"
+                class="btn btn-primary"
+                >GitHub</a
+              >
+              <a
+                href="https://workouts-fit-api.vercel.app/"
+                class="btn btn-secondary"
+                >Demo</a
+              >
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col">
+            <div class="card bg-secondary text-light h-75">
+              <img
+                src="/img/appWorkout.png" 
+                class="card-img-top" style="width: auto; height: 300px;"
+                alt="Proyecto 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-primary"><b>App Workout</b></h5>
+                <p class="card-text">
+                  Aplicación web que permite a los usuarios explorar y gestionar rutinas de entrenamiento. 
+                  Está compuesto por un frontend ligero desarrollado con HTML, CSS, JavaScript y Bootstrap, 
+                  que consume la API RESTful de workouts creada en el anterior proyecto. Desplegada en Vercel y alojada en GitHub.
+                </p>
+                <a
+                  href="https://github.com/muniloper30/workouts-app.git"
+                  class="btn btn-primary"
+                  >GitHub</a
+                >
+                <a
+                  href="https://workouts-app-brown.vercel.app/"
+                  class="btn btn-secondary"
+                  >Demo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col">
+            <div class="card bg-secondary text-light h-75">
               <img
                 src="/img/csg_ecommerce.png"
-                class="card-img-top"
+                class="card-img-top img-fluid" style="width: auto; height: 300px;"
                 alt="Proyecto 1"
               />
               <div class="card-body">
-                <h5 class="card-title">Csg Ecommerce</h5>
+                <h5 class="card-title text-primary"><b>Csg Ecommerce</b></h5>
                 <p class="card-text">
-                  CSG Ecommerce es una pequeña web desarrollada en PHP que
+                  Pequeña web desarrollada en PHP que
                   simula una plataforma de compras en línea. Incorpora
                   funcionalidades clave como la gestión de un carrito de compras
                   persistente mediante sesiones,además de personalización del
                   idioma (español/inglés) y la selección de temas
-                  (claro/oscuro). Las cookies se utilizan para almacenar
-                  preferencias como el idioma y el tema del usuario,
-                  garantizando que estas configuraciones se mantengan incluso
-                  después de cerrar el navegador. Esto proporciona una
-                  experiencia personalizada y consistente para los usuarios..
+                  (claro/oscuro).
                 </p>
                 <a
                   href="https://github.com/muniloper30/csg_eCommerce"
@@ -344,15 +402,17 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="carousel-item">
           <div class="col">
-            <div class="card bg-secondary text-light h-100">
+            <div class="card bg-secondary text-light h-75">
               <img
                 src="/img/todoList.png"
-                class="card-img-top"
+                class="card-img-top" style="width: auto; height: 300px;"
                 alt="Proyecto 2"
               />
               <div class="card-body">
-                <h5 class="card-title">TodoList</h5>
+                <h5 class="card-title text-primary"><b>TodoList</b></h5>
                 <p class="card-text">
                   To-Do List (lista de tareas) interactiva creada con HTML, CSS
                   y JavaScript, donde los usuarios pueden agregar, eliminar y
@@ -374,24 +434,23 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="carousel-item">
           <div class="col">
-            <div class="card bg-secondary text-light h-100">
+            <div class="card bg-secondary text-light h-75">
               <img
                 src="/img/courdev.png"
-                class="card-img-top"
+                class="card-img-top" style="width: auto; height: 300px;"
                 alt="Proyecto 3"
               />
               <div class="card-body">
-                <h5 class="card-title">COURDEV</h5>
+                <h5 class="card-title text-primary"><b>COURDEV</b></h5>
                 <p class="card-text">
-                  API RESTful para gestionar cursos formativos. La aplicación
+                  API RESTful realizada con Node.js y Express para gestionar cursos formativos. La aplicación
                   permite a los usuarios visualizar todos los cursos disponibles
-                  y filtrarlos por categorías como Desarrollo Web, Programación,
-                  Ciberseguridad, Bases de Datos, entre otras. El backend de la
-                  aplicación está construído con Node.js y Express, mientras que
-                  la base de datos se encuentra alojada de forma remota en
-                  Railway y el frontend está desplegado en Vercel..
+                  y filtrarlos por categoría. <b>Migrando base de datos</b>
                 </p>
+                <p class="text-danger">[Demo en mantenimiento]</p>
                 <a
                   href="https://github.com/muniloper30/cursos_formativos"
                   class="btn btn-primary"
@@ -406,7 +465,23 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+    
+    
+  </div>
+</section>
+
+
     </div>
     <script
       src="https://kit.fontawesome.com/f0d1e02054.js"
@@ -418,3 +493,10 @@
   <footer class="bg-primary text-light text-center py-3">
     <p>© 2024 Víctor Lorencio García</p>
 </html>
+
+
+
+
+
+
+
