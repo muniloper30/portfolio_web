@@ -51,6 +51,15 @@
 }
 
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* Invierte el color a negro para mayor visibilidad */
+  background-color: rgba(0, 0, 0, 0.7); /* Más oscuro para mayor contraste */
+  border-radius: 8px; /* Bordes suavemente redondeados, no completamente circulares */
+  padding: 15px; /* Aumenta el tamaño del área clickeable */
+  width: 50px; /* Ancho personalizado */
+  height: 50px; /* Alto personalizado */
+}
 
 
 
@@ -93,18 +102,42 @@
   }
 
   #btn-exp {
-    margin-bottom: 12rem;
+    margin-bottom: rem;
     font-size: 1.5rem;
     z-index: 10;
     position: relative;
   }
+
+  
+
+  #experiencia {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de fila a columna */
+    
+    margin: 0 auto; /* Centra los elementos */
   }
+  
+  }
+  
 
 
   /* Media Query para pantallas pequeñas */
   @media (max-width: 768px) {
 
     
+    #habilidades {
+      background-image: url(../img/skillsVictor.png);
+      background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+      background-position: center; /* Centra la imagen */
+      background-repeat: no-repeat; /* Evita que la imagen se repita */
+      padding: 2rem; /* Espacio interno */
+      border-radius: 1rem; /* Bordes redondeados */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+      margin: 2rem; /* Espacio externo */
+    }
+
+   
+
     #skills .d-flex {
       flex-direction: column; /* Cambia la dirección de fila a columna */
       gap: 1rem; /* Añade un espacio entre los elementos */
@@ -120,6 +153,14 @@
       justify-content: center; /* Centra los iconos */
     }
 
+    #skills-columns {
+      background-color: #4E5D6C;
+      padding: 2rem; /* Espacio interno */
+      border-radius: 1rem; /* Bordes redondeados */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+      margin: 2rem; /* Espacio externo */
+
+    }
 
     #btn-exp {
       margin: 0 0;
@@ -159,13 +200,19 @@
     align-items: center;
   }
 
-
-
+  #skillMiraArriba {
+    display: block;  /* Asegura que se muestre en móvil */
+    margin: 0 auto; /* Centra la imagen */
+    width: 15rem;     /* Ajusta el tamaño a tu preferencia */
+    height: auto;    /* Mantiene la proporción */
+    border-radius: 4rem; /* Bordes redondeados */
+  }
   
+ 
 
   section {
     opacity: 0; /* Inicia invisible */
-    transform: translateY(50px); /* Desplazamiento hacia abajo */
+    transform: translateY(30px); /* Desplazamiento hacia abajo */
     transition: opacity 1s ease-out, transform 1.5s ease-out; /* Transición suave */
 }
 
@@ -174,3 +221,8 @@ section.visible {
     transform: translateY(0); /* Mueve la sección a su posición original */
 }
 
+@media (min-width: 769px) {
+  #skillMiraArriba {
+    display: none;  /* Oculta la imagen en pantallas grandes */
+  }
+}
