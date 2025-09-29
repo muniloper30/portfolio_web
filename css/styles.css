@@ -1,49 +1,56 @@
-.icon-hover {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
 
-.icon-hover:hover {
-  transform: scale(1.2); /* Agranda el ícono al pasar el mouse */
-  color: #6c757d; /* Cambia el color a un tono gris claro */
-}
 
-#links a {
+  .icon-hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .icon-hover:hover {
+    transform: scale(1.2); /* Agranda el ícono al pasar el mouse */
+    color: #6c757d; /* Cambia el color a un tono gris claro */
+  }
+
+
+#links a{
+  z-index: 60;
   box-shadow: inset 0 0 0 0 #426a96;
-  padding: 0 0.25rem;
-  margin: 0 -0.25rem;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}  
 
-#links a:hover {
+#links a:hover{
   color: #fff;
   box-shadow: inset 200px 0 0 0 #ffff;
   padding: 0.3rem;
 }
 
+
 #miNombre {
   box-shadow: inset 0 0 0 0 #426a96;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   color: #fff;
-  padding: 0 0.25rem;
-  margin: 0 -0.25rem;
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
   font-size: 2rem;
   text-decoration: none;
 }
 
-#miNombre::before {
+
+#miNombre::before{
   content: "VL";
 }
 
-#miNombre:hover:before {
+#miNombre:hover:before{
   content: "Victor Lorencio";
   color: #426a96;
   background-color: #fff;
   border: 1px solid;
   border-radius: 0.5rem;
   box-shadow: inset 200px 0 0 0 #ffff;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   padding: 0 10px;
 }
+
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -55,38 +62,26 @@
   height: 50px; /* Alto personalizado */
 }
 
-#contenedor-experiencia {
-  position: fixed;
-  opacity: 0; /* Estado inicial */
-}
 
-#contenedor-experiencia.visible {
-  transition: opacity 3s; /* Animamos el 'opacity' */
-  opacity: 1; /* Estado final */
-  position: relative;
-}
+
+
+
+
 
 #btn-exp {
   margin-bottom: 12rem;
   font-size: 1.5rem;
 }
 
-/*Media Queries*/
 
-@media (max-width: 768px) {
-  .w-50 {
+
+  /*Media Queries*/
+
+ @media (max-width: 768px) {
+   .w-50 {
     display: none;
-  }
-  #contenedor-experiencia {
-    position: fixed;
-    opacity: 0;
-  }
-
-  #contenedor-experiencia.visible {
-    opacity: 1; /* Estado final */
-    transition: opacity 3s; /* Animamos el 'opacity' */
-    position: relative;
-  }
+   }
+   
 
   #btn-exp {
     margin-bottom: rem;
@@ -95,105 +90,121 @@
     position: relative;
   }
 
+  
+
   #experiencia {
     display: flex;
     flex-direction: column; /* Cambia la dirección de fila a columna */
-
+    
     margin: 0 auto; /* Centra los elementos */
   }
-}
+  
+  }
+  
 
-/* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
-  #habilidades {
-    background-image: url(../img/skillsVictor.png);
-    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 2rem; /* Espacio interno */
-    border-radius: 1rem; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    margin: 2rem; /* Espacio externo */
+
+  /* Media Query para pantallas pequeñas */
+  @media (max-width: 768px) {
+
+    
+    #habilidades {
+      background-image: url(../img/skillsVictor.png);
+      background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+      background-position: center; /* Centra la imagen */
+      background-repeat: no-repeat; /* Evita que la imagen se repita */
+      padding: 2rem; /* Espacio interno */
+      border-radius: 1rem; /* Bordes redondeados */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+      margin: 2rem; /* Espacio externo */
+    }
+
+   
+
+    #skills .d-flex {
+      flex-direction: column; /* Cambia la dirección de fila a columna */
+      gap: 1rem; /* Añade un espacio entre los elementos */
+    }
+
+    #skills-icons {
+      width: 100%; /* Asegura que los iconos ocupen todo el ancho */
+      margin: 0 auto; /* Centra los iconos */
+    }
+
+    #skills-icons .d-flex {
+      flex-wrap: wrap; /* Permite que los iconos se ajusten automáticamente */
+      justify-content: center; /* Centra los iconos */
+    }
+
+    #skills-columns {
+      background-color: #4E5D6C;
+      padding: 2rem; /* Espacio interno */
+      border-radius: 1rem; /* Bordes redondeados */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+      margin: 2rem; /* Espacio externo */
+
+    }
+
+    #btn-exp {
+      margin: 0 0;
+      margin-bottom: 2.5rem;
+      margin-left: 3rem;
+      font-size: 1.5rem;
+      z-index: 10;
+    }
+
+
+    #contenedor-experiencia{
+      position: fixed;
+      opacity: 0;
+    }
+
+    #contenedor-experiencia.visible {
+      opacity: 1; /* Estado final */
+      transition: opacity 3s; /* Animamos el 'opacity' */
+      position: relative;
+    }
+    
+   
+
+    #skills-image {
+      display: none; /* Oculta la imagen en pantallas pequeñas */
+    }
+
+    #remove {
+        display: none; /* Oculta el botón en pantallas pequeñas */
+    }
+  }
+  
+
+  #container-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  #skills .d-flex {
-    flex-direction: column; /* Cambia la dirección de fila a columna */
-    gap: 1rem; /* Añade un espacio entre los elementos */
+  #skillMiraArriba {
+    display: block;  /* Asegura que se muestre en móvil */
+    margin: 0 auto; /* Centra la imagen */
+    width: 15rem;     /* Ajusta el tamaño a tu preferencia */
+    height: auto;    /* Mantiene la proporción */
+    border-radius: 4rem; /* Bordes redondeados */
   }
+  
+ 
 
-  #skills-icons {
-    width: 100%; /* Asegura que los iconos ocupen todo el ancho */
-    margin: 0 auto; /* Centra los iconos */
-  }
-
-  #skills-icons .d-flex {
-    flex-wrap: wrap; /* Permite que los iconos se ajusten automáticamente */
-    justify-content: center; /* Centra los iconos */
-  }
-
-  #skills-columns {
-    background-color: #4e5d6c;
-    padding: 2rem; /* Espacio interno */
-    border-radius: 1rem; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    margin: 2rem; /* Espacio externo */
-  }
-
-  #btn-exp {
-    margin: 0 0;
-    margin-bottom: 2.5rem;
-    margin-left: 3rem;
-    font-size: 1.5rem;
-    z-index: 10;
-  }
-
-  #contenedor-experiencia {
-    display: none; /* no ocupa espacio ni tapa nada */
-    opacity: 0;
-    transition: opacity 1s ease;
-  }
-
-  #contenedor-experiencia.visible {
-    display: block; /* aparece en el flujo */
-    opacity: 1;
-  }
-
-  #skills-image {
-    display: none; /* Oculta la imagen en pantallas pequeñas */
-  }
-
-  #remove {
-    display: none; /* Oculta el botón en pantallas pequeñas */
-  }
-}
-
-#container-cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#skillMiraArriba {
-  display: block; /* Asegura que se muestre en móvil */
-  margin: 0 auto; /* Centra la imagen */
-  width: 15rem; /* Ajusta el tamaño a tu preferencia */
-  height: auto; /* Mantiene la proporción */
-  border-radius: 4rem; /* Bordes redondeados */
-}
-
-section {
-  opacity: 0; /* Inicia invisible */
-  transform: translateY(30px); /* Desplazamiento hacia abajo */
-  transition: opacity 1s ease-out, transform 1.5s ease-out; /* Transición suave */
+  section {
+    opacity: 0; /* Inicia invisible */
+    transform: translateY(30px); /* Desplazamiento hacia abajo */
+    transition: opacity 1s ease-out, transform 1.5s ease-out; /* Transición suave */
 }
 
 section.visible {
-  opacity: 1; /* Hace que la sección se vuelva visible */
-  transform: translateY(0); /* Mueve la sección a su posición original */
+    opacity: 1; /* Hace que la sección se vuelva visible */
+    transform: translateY(0); /* Mueve la sección a su posición original */
 }
 
 @media (min-width: 769px) {
   #skillMiraArriba {
-    display: none; /* Oculta la imagen en pantallas grandes */
+    display: none;  /* Oculta la imagen en pantallas grandes */
   }
 }
